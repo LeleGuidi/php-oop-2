@@ -15,6 +15,7 @@ class CreditCard {
     } 
 }
 
+//Controllare se la carta di credito è scaduta o meno
 function isExpiry($date) {
     $date = str_replace('/', '-', $date);
     if(strtotime($date) < strtotime(date('d-m-Y'))) {

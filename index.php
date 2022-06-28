@@ -18,7 +18,7 @@ $registeredUser = [
 ];
 $credit_card = new CreditCard('1111222233334444', '31/05/2022', 'Emanuele', '123'); 
 
-
+//Viene richiamata la funzione all'interno del file CreditCard.php per controllare se la data di scadenza è valida o meno
 try {
     echo isExpiry($credit_card->expiry);
 } catch(Exception $e) {
