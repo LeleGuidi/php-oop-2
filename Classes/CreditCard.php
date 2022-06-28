@@ -21,8 +21,6 @@ function isExpiry($date) {
     if(strtotime($date) < strtotime(date('d-m-Y'))) {
         throw new Exception("La carta di credito è scaduta " . $date);
     }
-
-    return ("Carta di credito valida");
 }
 
 ?>
