@@ -12,13 +12,16 @@ class CreditCard {
         $this->expiry = $_expiry;
         $this->account_holder = $_account_holder;
         $this->cvc = $_cvc;
+    } 
+}
+
+function isExpiry($date) {
+    $date = str_replace('/', '-', $date);
+    if(strtotime($date) < strtotime(date('d-m-Y'))) {
+        throw new Exception("La carta di credito è scaduta " . $date);
     }
 
-    function isExpiry() {
-        if ($this->expiry > date("d-m-Y")) {
-            throw new Exception("La carta di credito è scaduta");
-        }
-    }
+    return ("Carta di credito valida");
 }
 
 ?>
