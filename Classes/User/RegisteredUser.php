@@ -9,6 +9,6 @@ class RegisteredUser extends User {
     }
 
     public function setDiscount() {
-        $this->discount = "20%"
+        $this->discount = "20%";
     }
 }
